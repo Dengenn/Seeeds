@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>seeeds — wear your freedom</title>
+<meta name="description" content="seeeds is a clothing brand built to remember the freedom fighters. They buried us, but little did they know we were seeeds.">
+<meta name="theme-color" content="#C9A68C">
+<link rel="icon" href="assets/mark-gold.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Anton&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/seeeds.css">
+</head>
+<body data-page="home">
+<div id="site-header"></div>
+<main>
+
+  <section class="hero">
+    <img class="hero-img" src="assets/photos/hero-trio.jpg" alt="Three people dressed in black, standing close together">
+    <div class="wrap">
+      <h1 class="sr">They buried us, but little did they know we were seeeds</h1>
+      <div class="hero-shift">
+      <img class="hero-word" src="assets/wordmark-ivory.svg" alt="seeeds">
+      <p class="hero-text">Never forget your race&hellip; seeeds, <span class="pink">wear your freedom.</span></p>
+      <div class="actions"><a class="btn white" href="shop.html?new=1">Shop Now</a><a class="btn outline-w" href="story.html">Our Story</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="head-row"><h2 class="h2">New in</h2><a class="link" href="shop.html?new=1">Shop all</a></div>
+      <div class="grid" id="featured"></div>
+    </div>
+  </section>
+
+  <section class="ad">
+    <div class="wrap">
+      <h2 class="eyebrow-h">Featured</h2>
+    </div>
+    <div class="ad-media">
+      <video id="ad-video" src="assets/video/hero-video.mp4" autoplay muted loop playsinline preload="metadata" aria-label="seeeds campaign film: a pink tee breaks free of its chains"></video>
+      <div class="ad-cta"><a class="btn outline-w" href="shop.html?c=bloom">Explore</a><a class="btn white" href="product.html?id=bloom-tee">Shop the Bloom</a></div>
+    </div>
+    <div class="wrap ad-copy">
+      <div class="label">The Bloom Tee</div>
+      <h2 class="ad-title">Wear your freedom</h2>
+      <p>The chains come off. What's left is the colour of everything that breaks through.</p>
+    </div>
+  </section>
+
+  <section class="section rail-section">
+    <div class="wrap">
+      <div class="head-row"><h2 class="h2">Collections</h2></div>
+      <div class="rail"><div class="collections" id="collections"></div></div>
+    </div>
+  </section>
+
+  <section class="section tint">
+    <div class="wrap split">
+      <div class="media">
+        <div class="splash"><img src="assets/splash/splash-02.svg" alt=""></div>
+        <img class="photo" src="assets/photos/look-studio.jpg" alt="Man in black standing in a photo studio" loading="lazy">
+      </div>
+      <div class="copy">
+        <div class="label">Why we exist</div>
+        <blockquote class="motto">Freedom wasn't given. It was planted.</blockquote>
+        <p class="lead">Somebody fought so you could walk into any room you like. Most of us have forgotten their names. Every seeeds piece carries one, so the story is never buried again.</p>
+        <a class="btn light" href="story.html">Read our story</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap signup">
+      <img class="mark" src="assets/mark-gold.svg" alt="">
+      <h2 class="h2">Join the soil</h2>
+      <p>New drops, the stories behind the names, and first access to Reclaimed one-of-ones.</p>
+      <form id="signup" novalidate>
+        <label class="sr" for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="Email address" autocomplete="email">
+        <button class="btn" type="submit">Sign up</button>
+      </form>
+      <div class="note" id="signup-note" aria-live="polite"></div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

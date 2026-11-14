@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Privacy Rights — seeeds</title>
+<meta name="description" content="Access, correct, delete or download your data, and opt out of sale or sharing.">
+<meta name="theme-color" content="#C9A68C">
+<link rel="icon" href="assets/mark-gold.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Anton&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/seeeds.css">
+</head>
+<body data-page="privacy-rights">
+<div id="site-header"></div>
+<main>
+
+  <section class="legal-head"><div class="wrap">
+    <div class="label">Legal</div>
+    <h1 class="h1" style="margin-top:10px">Your Privacy Rights</h1>
+    <p class="muted">Your data belongs to you. Here's how to take control of it.</p>
+  </div></section>
+  <div class="wrap legal">
+    <nav class="legal-toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#your-rights">Your rights</a></li><li><a href="#request">Make a request</a></li><li><a href="#do-not-sell">Do not sell or share</a></li><li><a href="#verify">Verification and timing</a></li><li><a href="#more">More information</a></li></ol></nav>
+    <article class="prose">
+      <h2 id="your-rights">Your rights</h2>
+      <p>Wherever you live, you can use the rights below. They come from laws such as the UK and EU GDPR, the California Consumer Privacy Act (CCPA/CPRA) and other privacy laws. Read our <a href="privacy.html">Privacy Policy</a> for the full details.</p>
+      <div class="rights-grid"><div><h3>Access</h3><p>Get a copy of the personal information we hold about you.</p></div><div><h3>Correction</h3><p>Fix anything that's inaccurate or incomplete.</p></div><div><h3>Deletion</h3><p>Ask us to erase your data, subject to legal record-keeping.</p></div><div><h3>Portability</h3><p>Receive your data in a common, machine-readable format.</p></div><div><h3>Objection and restriction</h3><p>Ask us to stop or limit certain uses, such as profiling.</p></div><div><h3>Withdraw consent</h3><p>Turn off marketing emails or cookies at any time.</p></div><div><h3>Opt out of sale or sharing</h3><p>Stop advertising cookies that count as selling or sharing.</p></div><div><h3>Non-discrimination</h3><p>Using these rights will never change your prices or service.</p></div></div>
+
+      <h2 id="request">Make a request</h2>
+      <p>Tell us what you'd like us to do. It's free, and you can also make a request through an authorised agent.</p>
+      <form class="req" id="rights-form" novalidate>
+        <fieldset><legend>What would you like to do?</legend><div class="choice">
+          <label><input type="radio" name="rtype" value="Access my data"><span>Access my data</span></label><label><input type="radio" name="rtype" value="Correct my data"><span>Correct my data</span></label><label><input type="radio" name="rtype" value="Delete my data"><span>Delete my data</span></label><label><input type="radio" name="rtype" value="Download my data"><span>Download my data</span></label><label><input type="radio" name="rtype" value="Object or restrict"><span>Object or restrict</span></label><label><input type="radio" name="rtype" value="Opt out of marketing"><span>Opt out of marketing</span></label>
+        </div></fieldset>
+        <label class="sr" for="r-name">Full name</label><input class="field-in" id="r-name" name="name" type="text" placeholder="Full name" autocomplete="name">
+        <label class="sr" for="r-email">Email address</label><input class="field-in" id="r-email" name="email" type="email" placeholder="Email address used with seeeds" autocomplete="email">
+        <label class="sr" for="r-msg">Details</label><textarea class="field-in" id="r-msg" name="details" placeholder="Anything that helps us find your data, e.g. an order number (optional)"></textarea>
+        <button class="btn" type="submit">Submit request</button>
+        <p class="note" id="rights-note" aria-live="polite"></p>
+      </form>
+
+      <h2 id="do-not-sell">Do not sell or share my personal information</h2>
+      <p>We never sell your data for money. Some advertising cookies may count as "selling" or "sharing" under US state laws. Switch this on to opt out on this browser. It turns off marketing cookies.</p>
+      <div class="dns"><div><strong>Opt out of sale and sharing</strong><p class="muted" id="dns-note">Applies to this browser and device.</p></div>
+        <label class="switch"><input type="checkbox" id="dns-toggle"><span class="track" aria-hidden="true"></span><span class="sr">Opt out of sale and sharing</span></label></div>
+      <p id="gpc-note" hidden><strong>Global Privacy Control detected.</strong> Your browser is sending a GPC signal, which we treat as an opt-out of sale and sharing.</p>
+      <p>You can also manage every cookie category in <button type="button" class="link" data-cookie-settings>Cookie Settings</button>.</p>
+
+      <h2 id="verify">Verification and timing</h2>
+      <p>To protect you, we'll confirm your identity by emailing the address on your account before we act. We respond within one month (UK and EU) or 45 days (US). Where the law allows, complex requests may take longer, and we'll let you know if so.</p>
+
+      <h2 id="more">More information</h2>
+      <p>Questions? Email <span class="fill">[privacy contact email]</span>. If you're unhappy with our response, you have the right to complain to your data protection authority.</p>
+    </article>
+  </div>
+</main>
+<div id="site-footer"></div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
