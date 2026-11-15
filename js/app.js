@@ -163,7 +163,7 @@
       '<form id="auth-form" novalidate><input class="field-in" id="auth-name" type="text" placeholder="First name" autocomplete="given-name" hidden>' +
       '<input class="field-in" type="email" placeholder="Email address" autocomplete="email" required><input class="field-in" type="password" placeholder="Password" autocomplete="current-password" required>' +
       '<button class="btn block" type="submit" id="auth-go">Sign in</button><div class="note" id="auth-note" aria-live="polite"></div></form>' +
-      '<div class="switch" id="auth-switch"></div></div></div>';
+      '<div class="auth-switch" id="auth-switch"></div></div></div>';
   }
   var authMode = "signin";
   function openAuth(mode) {
@@ -298,7 +298,8 @@
         '<details open><summary>Gender</summary><div class="opts">' + checks("g", [["men", "Men"], ["women", "Women"], ["kids", "Kids"]], state.g) + "</div></details>" +
         '<details open><summary>Collection</summary><div class="opts">' + checks("c", S.collections.map(function (c) { return [c.id, c.name]; }), state.c) + "</div></details>" +
         '<details><summary>Shop by Price</summary><div class="opts">' + checks("p", priceBands.map(function (b, i) { return [String(i), b[0]]; }), state.price.map(String)) + "</div></details>" +
-        '<details><summary>New</summary><div class="opts"><label class="check"><input type="checkbox" data-f="n"' + (state.isNew ? " checked" : "") + ">Just In</label></div></details>";
+        '<details><summary>New</summary><div class="opts"><label class="check"><input type="checkbox" data-f="n"' + (state.isNew ? " checked" : "") + ">Just In</label></div></details>" +
+        '<div class="apply"><button class="btn" id="apply-side">Show results</button></div>';
       $$("[data-t]", $("#side")).forEach(function (a) { a.addEventListener("click", function (e) { e.preventDefault(); state.t = a.dataset.t; state.a = ""; renderSide(); render(); }); });
       $$("input[data-f]", $("#side")).forEach(function (i) {
         i.addEventListener("change", function () {
@@ -309,11 +310,15 @@
           render();
         });
       });
-      $("#close-side").addEventListener("click", function () { $(".plp").classList.remove("show-side"); document.body.style.overflow = ""; });
+      function closeSide() { $(".plp").classList.remove("show-side"); document.body.style.overflow = ""; }
+      $("#close-side").addEventListener("click", closeSide);
+      $("#apply-side").addEventListener("click", closeSide);
+      $("#apply-side").textContent = "Show results (" + list().length + ")";
     }
     function render() {
       var l = list();
       $("#plp-title").textContent = title() + " (" + l.length + ")";
+      var ap = $("#apply-side"); if (ap) ap.textContent = "Show results (" + l.length + ")";
       $("#grid").innerHTML = l.length ? l.map(card).join("") : '<p class="empty-plp">No products match these filters yet.</p>';
       bindCards($("#grid"));
       var q = new URLSearchParams();
@@ -547,7 +552,7 @@
     wrap.innerHTML =
       '<div class="cookie-bar" role="region" aria-label="Cookie notice" hidden><div class="cookie-in">' +
       "<p><strong>We use cookies.</strong> Some keep the site working. With your permission we'd also like to use cookies for favourites, analytics and marketing. <a href=\"privacy.html#cookies\">Learn more</a></p>" +
-      '<div class="cookie-actions"><button class="btn light sm" data-ck="settings">Cookie Settings</button><button class="btn light sm" data-ck="reject">Reject non-essential</button><button class="btn sm" data-ck="accept">Accept all</button></div></div></div>' +
+      '<div class="cookie-actions"><button class="btn light sm" data-ck="settings">Cookie Settings</button><button class="btn light sm" data-ck="reject">Reject all</button><button class="btn sm" data-ck="accept">Accept all</button></div></div></div>' +
       '<div class="modal" id="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="ck-title"><div class="box ck-box">' +
       '<button class="icon-btn x" aria-label="Close">' + I.close + '</button><h2 id="ck-title">Cookie settings</h2>' +
       '<p>Choose which cookies seeeds can use. You can change this any time from "Cookie Settings" at the bottom of every page.</p>' +
